@@ -1,6 +1,7 @@
-import { Module } from '@nestjs/common';
+import { Module } from "@nestjs/common";
+import { SkinsModule } from "./api/skins/skins.module";
 
 @Module({
-  imports: [],
+  imports: [SkinsModule],
 })
 export class AppModule {}

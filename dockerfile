@@ -1,11 +1,11 @@
-FROM node:20.3.17-alpine AS builder
+FROM node:20.8-alpine3.18 AS builder
 WORKDIR /build
 
 COPY . .
 RUN yarn install --frozen-lockfile
 RUN yarn run build:prod
 
-FROM node:20.3.17-alpine
+FROM node:20.8-alpine3.18
 WORKDIR /app
 
 COPY --from=builder /build /app
