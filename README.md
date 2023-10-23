@@ -1,1 +1,0 @@
-# jump2digital-skins-api
