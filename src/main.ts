@@ -1,10 +1,14 @@
-import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
-import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import helmet from 'helmet';
-import { ValidationPipe } from '@nestjs/common';
+import { NestFactory } from "@nestjs/core";
+import { AppModule } from "./app.module";
+import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
+import helmet from "helmet";
+import { ValidationPipe } from "@nestjs/common";
+import { configDotenv } from "dotenv";
 
 async function bootstrap() {
+  // Load env
+  configDotenv();
+
   const app = await NestFactory.create(AppModule);
 
   // Enable CORS (so the API can be accessed from any domain. This can be restricted if we want)
@@ -18,12 +22,12 @@ async function bootstrap() {
 
   // Setup documentation (using Open API standard)
   const config = new DocumentBuilder()
-    .setTitle('Skins API')
-    .setDescription('Skins API for the Jump2Digital Hackaton')
-    .setVersion('1.0')
+    .setTitle("Skins API")
+    .setDescription("Skins API for the Jump2Digital Hackaton")
+    .setVersion("1.0")
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('docs', app, document);
+  SwaggerModule.setup("docs", app, document);
 
   await app.listen(3000);
 }

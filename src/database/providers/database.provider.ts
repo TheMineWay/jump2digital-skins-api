@@ -1,6 +1,7 @@
 import { Sequelize } from "sequelize-typescript";
 import { getEnv } from "../../config/env";
 import { UserSkinEntity } from "../entities/user-skin.entity";
+import { Logger } from "@nestjs/common";
 
 export const databaseProviders = [
   {
@@ -17,9 +18,11 @@ export const databaseProviders = [
         username,
         password,
         database,
+        logging: Logger.log,
       });
+      await sequelize.authenticate();
       sequelize.addModels([UserSkinEntity]);
-      await sequelize.sync();
+      await sequelize.sync({ alter: true });
       return sequelize;
     },
   },
