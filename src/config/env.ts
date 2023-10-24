@@ -19,6 +19,7 @@ const toString = (value?: string, allowUndefined: boolean = false) =>
 
 export const getEnv = () => {
   const env: Partial<EnvRawFile> = process.env as Object;
+
   return {
     database: {
       password: toString(env.DATABASE_PASSWORD),

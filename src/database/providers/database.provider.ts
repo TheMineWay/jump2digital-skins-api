@@ -1,5 +1,6 @@
 import { Sequelize } from "sequelize-typescript";
 import { getEnv } from "../../config/env";
+import { UserSkinEntity } from "../entities/user-skin.entity";
 
 export const databaseProviders = [
   {
@@ -17,7 +18,7 @@ export const databaseProviders = [
         password,
         database,
       });
-      sequelize.addModels([]);
+      sequelize.addModels([UserSkinEntity]);
       await sequelize.sync();
       return sequelize;
     },

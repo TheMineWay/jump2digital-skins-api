@@ -1,4 +1,5 @@
 import {
+  Body,
   Controller,
   Delete,
   Get,
@@ -10,6 +11,7 @@ import {
 import { SkinsService } from "./skins.service";
 import { uuid } from "../../types/generic/uuid.type";
 import { UserSkinsService } from "./user-skins/user-skins.service";
+import { SetSkinColorDTO } from "../../dtos/api/user-skins/set-skin-color.dto";
 
 @Controller("skins")
 export class SkinsController {
@@ -34,7 +36,7 @@ export class SkinsController {
   }
 
   @Put("color")
-  async setSkinColor() {
+  async setSkinColor(@Body() { color }: SetSkinColorDTO) {
     // UserId is used to confirm the requester is allowed to modify that skin
     //return await this.userSkinsService.setUserSkinColorBySkinAndUserId();
   }
