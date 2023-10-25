@@ -32,6 +32,7 @@ Follow this instructions in order to test the project.
 You need to have some software installed to start the project.
 
 - **[yarn]("https://yarnpkg.com/"):** go to their [instalaltion page]("https://classic.yarnpkg.com/lang/en/docs/install") and install **yarn**.
+  _(you can run the project using **npm**, but the docker version only works if you use **yarn**)_
 - **[Docker]("https://www.docker.com/") _(optional)_**: if you want to run the dockerized version of the API, you have to install the **Docker engine**.
   Go to their [installation page]("https://docs.docker.com/engine/install/") and install **Docker**.
 
