@@ -22,7 +22,16 @@ export class UserSkinsRepository {
   async findSkinBySkinIdAndUserId(skinId: uuid, userId: uuid) {
     return await UserSkinEntity.findOne({
       where: {
-        id: skinId,
+        skinId,
+        userId,
+      },
+    });
+  }
+
+  async findSkinByUserSkinIdAndUserId(userSkinId: uuid, userId: uuid) {
+    return await UserSkinEntity.findOne({
+      where: {
+        id: userSkinId,
         userId,
       },
     });
@@ -48,5 +57,9 @@ export class UserSkinsRepository {
         userId,
       },
     });
+  }
+
+  async create(userSkin: UserSkinCreateAttributes) {
+    return await UserSkinEntity.create(userSkin);
   }
 }

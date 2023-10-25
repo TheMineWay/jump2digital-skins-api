@@ -24,6 +24,6 @@ import { getEnv } from "../../config/env";
       },
     }),
   ],
-  exports: [AuthService],
+  exports: [AuthService, JwtModule],
 })
 export class AuthModule {}

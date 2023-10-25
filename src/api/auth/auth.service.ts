@@ -4,7 +4,10 @@ import {
   UnauthorizedException,
 } from "@nestjs/common";
 import { UsersService } from "../users/users.service";
-import { compareHashWithSalt } from "../../utils/cryptography/cryptography.util";
+import {
+  compareHashWithSalt,
+  hashWithSalt,
+} from "../../utils/cryptography/cryptography.util";
 import { JwtService } from "@nestjs/jwt";
 
 @Injectable()

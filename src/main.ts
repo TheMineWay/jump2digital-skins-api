@@ -25,6 +25,13 @@ async function bootstrap() {
     .setTitle("Skins API")
     .setDescription("Skins API for the Jump2Digital Hackaton")
     .setVersion("1.0")
+    .addSecurity("bearerAuth", {
+      type: "http",
+    })
+    .addBearerAuth(
+      { type: "http", scheme: "bearer", bearerFormat: "JWT" },
+      "bearerAuth"
+    )
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup("docs", app, document);

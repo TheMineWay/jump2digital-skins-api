@@ -1,1 +1,30 @@
-{}
+[
+  {
+    "id": "8cb8970e-ef2c-449f-b856-66936e069106",
+    "name": "Spring",
+    "price": 14.95,
+    "typeId": "c2610e69-bdbb-4825-8e35-8650d57863f6",
+    "color": "#34DE34"
+  },
+  {
+    "id": "1485e549-c2bc-4de7-ad1b-d983ae2ecda4",
+    "name": "Winter",
+    "price": 18.95,
+    "typeId": "c2610e69-bdbb-4825-8e35-8650d57863f6",
+    "color": "#3434DE"
+  },
+  {
+    "id": "c5f5e73c-ec74-44bf-a588-2a730d108ea6",
+    "name": "Summer",
+    "price": 28.95,
+    "typeId": "c2610e69-bdbb-4825-8e35-8650d57863f6",
+    "color": "#DEDE34"
+  },
+  {
+    "id": "bff8403f-8e74-4db3-9465-034321e4a3a4",
+    "name": "Autum",
+    "price": 5.95,
+    "typeId": "c2610e69-bdbb-4825-8e35-8650d57863f6",
+    "color": "#DE4034"
+  }
+]

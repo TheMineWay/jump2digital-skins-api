@@ -15,6 +15,7 @@ import { UserEntity } from "./user.entity";
 export interface UserSkinAttributes {
   id: uuid;
 
+  skinId: uuid;
   color: string;
 
   // Associations
@@ -26,6 +27,13 @@ export interface UserSkinCreateAttributes
 
 @Table({
   tableName: "userSkins",
+  indexes: [
+    {
+      // THis is not the primary key, but we want users to have only one instance of each skin
+      fields: ["userId", "skinId"] as (keyof UserSkinAttributes)[],
+      unique: true,
+    },
+  ],
 })
 export class UserSkinEntity
   extends Model<UserSkinAttributes, UserSkinCreateAttributes>
@@ -37,7 +45,11 @@ export class UserSkinEntity
   id: uuid;
 
   @AllowNull(false)
-  @Column(DataType.STRING(6))
+  @Column(DataType.UUID)
+  skinId: uuid;
+
+  @AllowNull(false)
+  @Column(DataType.STRING(7))
   color: string;
 
   // Associations

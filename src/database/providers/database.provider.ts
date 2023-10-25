@@ -19,7 +19,7 @@ export const databaseProviders = [
         username,
         password,
         database,
-        logging: Logger.log,
+        logging: console.log,
       });
       await sequelize.authenticate();
       sequelize.addModels([UserSkinEntity, UserEntity]);
