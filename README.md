@@ -1,5 +1,5 @@
 _(I did all comments and documentation in English as it is the standarized language)_.
-Both contributors are me, I used my personal and professionala account (I used the work laptop to work on the project on mealtime)
+Both contributors are me, I used my personal and professionala account (I used the work laptop to work on the project during mealtime)
 
 # Jump2Digital hackaton backend test
 
