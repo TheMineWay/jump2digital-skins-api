@@ -75,3 +75,5 @@ The application accomplishes all expected requirements and:
  - The code is optimized.
  - Code follows good practices (it is strongly typed and uses a strong framework).
  - Code is well documented.
+
+It is also secure and up to date.
