@@ -61,3 +61,17 @@ Finally you can execute the project.
 If you are using **Docker**, run `docker compose` to create the container.
 
 If you are **not using Docker**, simply run `yarn run start`.
+
+Then, the server will be serving at [http://localhost:3000]("http://localhost:3000").
+If you want to, you can use the OpenAPI documentation [http://localhost:3000/docs]("http://localhost:3000/docs").
+
+## 2. Requirements
+
+The application accomplishes all expected requirements and:
+
+ - It is scalable (thanks to the ORM, Nest.Js, etc).
+ - Functions follow the single responsability principle.
+ - The project follows a consistent structure.
+ - The code is optimized.
+ - Code follows good practices (it is strongly typed and uses a strong framework).
+ - Code is well documented.
