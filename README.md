@@ -10,7 +10,7 @@ This is the backend developed as the access test for the Jump2Digital hackaton 2
 I decided to use [NodeJS 20]("https://nodejs.org/en") as the runtime environment. The application is fully dockerized, so it can be deployed and executed easily.
 All the project is coded in TypeScript in order to keep the code strongly typified.
 
-This project uses [NestJS]("https://nestjs.com") (a [express]("https://expressjs.com/") based framework) as the server framework. THis framework provides utilities that help developers make secure and escalable APIs faster.
+This project uses [NestJS]("https://nestjs.com") (a [express]("https://expressjs.com/") based framework) as the server framework. This framework provides utilities that help developers make secure and escalable APIs faster.
 
 ### 0.0. Libraries
 
@@ -23,6 +23,10 @@ Some _npm_ libraries were used when developing the API. Here I list the more imp
 - **[Helmet]("https://helmetjs.github.io/"):** a header security library. It injects security headers in response headers. It helps to patch common header based vulnerabilities.
 - **[class-validator]("https://github.com/typestack/class-validator#readme"):**: a library that allows payload validation. As JavaScript has no real datatypes we cannot trust types sent by the client. Using some decorators provided by this library we can map payloads, so sent data matches expected datatypes (if not, an error is thrown).
 - **[Dotenv]("https://github.com/motdotla/dotenv#readme"):** a library used to read and load **.env** files.
+
+### 0.1. Database
+
+In this project we are using a MySQL database.
 
 ## 1. Setup
 
@@ -70,11 +74,11 @@ If you want to, you can use the OpenAPI documentation [http://localhost:3000/doc
 
 The application accomplishes all expected requirements and:
 
- - It is scalable (thanks to the ORM, Nest.Js, etc).
- - Functions follow the single responsability principle.
- - The project follows a consistent structure.
- - The code is optimized.
- - Code follows good practices (it is strongly typed and uses a strong framework).
- - Code is well documented.
+- It is scalable (thanks to the ORM, Nest.Js, etc).
+- Functions follow the single responsability principle.
+- The project follows a consistent structure.
+- The code is optimized.
+- Code follows good practices (it is strongly typed and uses a strong framework).
+- Code is well documented.
 
 It is also secure and up to date.
