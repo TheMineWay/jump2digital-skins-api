@@ -28,6 +28,10 @@ Some _npm_ libraries were used when developing the API. Here I list the more imp
 
 In this project we are using a MySQL database.
 
+### 0.2. Environment
+
+In order to be able to ship the application to any device (without caring about OS, runtime version, etc) this project uses docker to ship a _Node 20.8-alpine3.18_ image containing the app.
+
 ## 1. Setup
 
 Follow this instructions in order to test the project.
